@@ -21,7 +21,7 @@ async def connect_ais_stream_async():
             print("Connecting to WebSocket...")
             async with websockets.connect("wss://stream.aisstream.io/v0/stream") as websocket:
                 subscribe_message = {
-                    "APIKey": "ed1fd477c0690d1d2333f90cde585489a9956958",
+                    "APIKey": "your api key",
                     "BoundingBoxes": [[[-11, 178], [30, 74]]]
                 }
                 subscribe_message_json = json.dumps(subscribe_message)
@@ -120,8 +120,8 @@ from requests.auth import HTTPBasicAuth
 
 # Your Sentinel Hub credentials
 def get_access_token():
-    CLIENT_ID = "your_client_id"  # Replace with your actual client ID
-    SECRET_KEY = 'your_secret_key'  # Replace with your actual secret key
+    CLIENT_ID = 'your client id here'
+    SECRET_KEY = 'your secret key here'
 
     API_URL = 'https://services.sentinel-hub.com/oauth/token'
     payload = {'grant_type': 'client_credentials'}
